@@ -1,0 +1,67 @@
+@import "../../constants/index.scss";
+@mixin defaultStyle {
+  label {
+    position: absolute;
+    height: 14px;
+    left: 7px;
+    top: -11px;
+    background: color(white);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    border: 3px solid color(white);
+
+    @include ipad {
+      font-size: 9px;
+    }
+  }
+  input {
+    border: 1px solid #BDBDBD;
+    padding: 6px;
+    font-family: Raleway;
+    border-radius: 2px;
+    width: 100%;
+    height: 42px;
+    font-size: 16px;
+    line-height: 21px;
+    color: color(black-lighter);
+
+    @include ipad {
+      height: 36px;
+      font-size: 13px;
+    }
+  } 
+
+  @content;
+}
+.container {
+  position: relative;
+  margin-bottom: 10px;
+  width: 95%;
+
+  @include ipad {
+    width: 100%;
+  }
+
+  .inputNormal {
+    @include defaultStyle {
+      label {
+        color: color(green-dark);
+      }
+      input {
+        border: 1px solid color(grey-light);
+      }
+    }
+  }
+  .inputWarning {
+    @include defaultStyle {
+      label {
+        color: color(red-primary);
+      }
+      input {
+        border: 1px solid color(red-primary);
+      }
+    }
+  }
+}
+

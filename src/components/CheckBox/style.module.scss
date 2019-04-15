@@ -1,0 +1,77 @@
+@import "../../constants/index.scss";
+
+.container {
+  text-align: left;
+  padding: 10px 0px 20px 0px;
+  display: flex;
+
+  .boxWrapper {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      background-color: white;
+      border: 1px solid color(grey-light);
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 4px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid color(green-primary);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0px;
+      width: 0px;
+
+      &:checked ~ .checkmark {
+        background-color: white;
+      }
+
+      &:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+  }
+  
+  label {
+    color: color(black-light);
+    font-size: 16px;
+    line-height: 21px;
+    color: #262626;
+    margin-left: 3px;
+
+    a {
+      text-decoration: none;
+      color: color(green-primary);
+    }
+
+    @include ipad {
+      font-size: 13px;
+    }
+  }
+}

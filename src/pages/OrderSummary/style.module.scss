@@ -1,0 +1,272 @@
+@import "../../constants/index.scss";
+
+.container {
+  h1 {
+    font-family: Cabin;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: color(black-light);
+    text-align: left;
+
+    @include ipad {
+      font-size: 19px;
+      position: absolute;
+      top: -261px;;
+    }
+  }
+
+  h2 {
+    font-family: Cabin;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: color(black-light);
+    text-align: left;
+
+    @include ipad {
+      font-size: 19px;
+    }
+  }
+
+  .content {
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include large {
+      width: size(normal);
+    }
+
+    @include tablet {
+      padding: 0px 30px 100px 30px;
+    }
+
+    @include ipad {
+      display: inherit;
+      padding: 0px 114px 100px 114px;
+    }
+
+    @include phone {
+      padding: 0px 24px 100px 24px;
+    }
+  }
+
+  .forms {
+    flex: 1.1;
+    order: 1;
+
+    @include tablet {
+      flex: 1.4;
+    }
+
+    .formwrapper {
+      padding-right: 103px;
+      
+      @include tablet {
+        padding-right: 0px;
+      }
+
+      @include ipad {
+        position: relative;
+      }
+
+      .details>div{
+        text-align: left;
+        margin-bottom: 25px;
+      }
+      .checkBox {
+        margin-bottom: -18px !important;
+      }
+  
+      .payment {
+        @include phone {
+          margin-top: 25px;
+        }
+
+        .price {
+          @include ipad {
+            font-size: 13px;
+          }
+
+          >div {
+            text-align: right;
+            padding: 5px;
+          }
+          span {
+            float: right;
+            width: 93px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 21px;
+          }
+          .nonPack {
+            span {
+              color: color(red-primary);
+            }
+          }
+          .pack {
+            span {
+              color: color(green-primary);
+            }
+          }
+          .total,
+          .total>span {
+            font-family: font(Cabin);
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            color: color(black-light);
+
+            @include ipad {
+              font-size: 13px;
+            }
+          }
+          .dashed {
+            border-bottom: 1px dashed color(grey-light);
+            margin-bottom: 5px;
+            letter-spacing: 10px;
+          }
+        }
+        .haveCoupon {
+          text-align: left;
+          display: none;
+          
+          @include ipad {
+            display: flex;
+          }
+
+          span {
+            font-family: Cabin;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 20px;
+            color: #5FB868;
+            margin-left: 7px;
+            border-bottom: 1px dashed #5fb868;
+            display: none;
+
+            &:hover {
+              cursor: pointer;
+            }
+            
+            @include ipad {
+              display: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+  .package {
+    flex: 1;
+    order: 2;
+
+    .packWrapper {
+      padding: 30px 0px 20px 151px;
+
+      @include tablet {
+        padding: 30px 0px 20px 66px;
+      }
+
+      @include ipad {
+        padding: 0px;
+        margin-top: 48px;
+      }
+
+      .packHead {
+        background: color(green-primary);
+        border-radius: 2px;
+        font-family: Cabin;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: color(white);
+        text-align: left;
+        padding: 8px 18px;
+
+        @include ipad {
+          padding: 3px 20px;
+          font-size: 16px;
+        }
+      }
+
+      .packBody {
+        background: url('../../resources/images/border-bottom.png') repeat-x;
+        text-align: left;
+        box-shadow: 0px -1px 2px -1px color(grey-light);
+        background-position-y: 160px;
+        height: 180px;
+
+        @include ipad {
+          background-position-y: 133px;
+          height: 153px;
+        }
+
+        .list {
+          padding: 6px 20px;
+
+          @include phone {
+            padding: 6px 10px;
+          }
+
+          span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background-color: color(red-primary);
+            border-radius: 50%;
+
+            @include ipad {
+              width: 7px;
+              height: 7px;
+            }
+          }
+
+          label {
+            margin-left: 15px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 21px;
+            color: color(black-light);
+
+            @include ipad {
+              font-size: 14px;
+              margin-left: 5px;
+            }
+          }
+        }
+
+        .date {
+          text-align: left;
+          padding: 10px 20px;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 21px;
+          color: color(black-light);
+  
+          span {
+            color: color(green-primary);
+          }
+
+          @include ipad {
+            font-size: 13px;
+          }
+
+          @include phone {
+            padding: 10px 10px;
+          }
+        }
+      }
+    }
+  }
+}

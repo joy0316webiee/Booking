@@ -1,0 +1,86 @@
+@import "../../constants/index.scss";
+
+.container {
+  background: #FAFAFD;
+  border-bottom: 1px solid #BDBDBD;
+  border-radius: 2px;
+
+  @include tablet {
+    padding: 0px 30px;
+  }
+
+  @include ipad {
+    padding: 0px 114px;
+    height: 36px;
+  }
+
+  @include phone {
+    padding: 0px 24px;
+  }
+
+  .content {        
+    display: inline-block;
+    width: 100%;
+    padding-top: 12px;
+
+    @include large {
+      width: size(normal);
+    }
+
+    @include ipad {
+      padding-top: 4px;
+    }
+
+    .logo {
+      float: left;
+  
+      .logoImage {
+        float: left;
+
+        @include ipad {
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+  
+      .logoLabel {
+        float: right;
+        margin-left: 20px;
+        padding: 11px 0px;
+        font-family: Cabin;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        
+        .sScreen {
+          display: none;
+        }
+
+        @include ipad {
+          line-height: 6px;
+          font-size: 16px;
+          
+          .xScreen {
+            display: none;
+          }
+          .sScreen {
+            display: inherit;
+          }
+        }
+      }
+    }
+    .lang {
+      float: right;
+      height: 36px;
+      width: 114px;
+
+      @include ipad {
+        width: 66px;
+        height: 24px;
+      }
+    }
+  }
+}

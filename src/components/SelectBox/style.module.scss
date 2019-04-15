@@ -1,0 +1,26 @@
+@import "../../constants/index.scss";
+
+.container {
+  border: 1px solid #BDBDBD;
+  border-radius: 2px;
+  background: #fafafa url("../../resources/images/select_arrow.svg") no-repeat 90% 50%;
+
+  select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: color(grey-primary);
+
+    @include ipad {
+      font-size: 9px;
+      line-height: 14px;
+    }
+  }
+}
