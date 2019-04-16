@@ -9,7 +9,7 @@ let langsArray = [{
   label: 'English',
   value: 'eng'
 }, {
-  label: 'Russia',
+  label: 'Russian',
   value: 'rus'
 }];
 

@@ -42,6 +42,7 @@ class OrderSummary extends Component {
                   First session: <span>IELTS</span>, on <span>Tuesday 5:30 pm</span>
                 </div>
               </div>
+              <div className={style.jagged}></div>
             </div>
           </div>
           <div className={style.forms}>

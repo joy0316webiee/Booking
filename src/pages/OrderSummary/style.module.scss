@@ -13,7 +13,7 @@
     @include ipad {
       font-size: 19px;
       position: absolute;
-      top: -261px;;
+      top: -285px;
     }
   }
 
@@ -200,10 +200,10 @@
       }
 
       .packBody {
-        background: url('../../resources/images/border-bottom.png') repeat-x;
         text-align: left;
         box-shadow: 0px -1px 2px -1px color(grey-light);
-        background-position-y: 160px;
+        
+        // background-position-y: 160px;
         height: 180px;
 
         @include ipad {
@@ -219,15 +219,15 @@
           }
 
           span {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             display: inline-block;
             background-color: color(red-primary);
             border-radius: 50%;
 
             @include ipad {
-              width: 7px;
-              height: 7px;
+              width: 6px;
+              height: 6px;
             }
           }
 
@@ -240,7 +240,7 @@
             color: color(black-light);
 
             @include ipad {
-              font-size: 14px;
+              font-size: 13px;
               margin-left: 5px;
             }
           }
@@ -266,6 +266,12 @@
             padding: 10px 10px;
           }
         }
+      }
+      .jagged {
+        background: url('../../resources/images/jagged.png') repeat-x;
+        height: 30px;
+        background-size: 15px;
+        background-position-y: 0px;
       }
     }
   }

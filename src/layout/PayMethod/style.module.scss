@@ -13,10 +13,6 @@
     }
 
     .alipayContent {
-      @include ipad {
-        display: none;
-      }
-
       .alipayFoot {
         display: inline-block;
         margin-left: 27px;
@@ -74,10 +70,6 @@
     }
 
     .creditContent {
-      @include ipad {
-        display: none;
-      }
-
       .creditBody {
         >div {
           padding: 10px 0px 10px 28px;
@@ -132,6 +124,7 @@
           color: #FFFFFF;
           background: #BDBDBD;
           border-radius: 100px;
+          border: none;
           width: 210px;
           height: 42px;
 

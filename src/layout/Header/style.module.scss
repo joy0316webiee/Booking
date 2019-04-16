@@ -3,20 +3,7 @@
 .container {
   background: #FAFAFD;
   border-bottom: 1px solid #BDBDBD;
-  border-radius: 2px;
-
-  @include tablet {
-    padding: 0px 30px;
-  }
-
-  @include ipad {
-    padding: 0px 114px;
-    height: 36px;
-  }
-
-  @include phone {
-    padding: 0px 24px;
-  }
+  border-radius: 2px;  
 
   .content {        
     display: inline-block;
@@ -27,8 +14,17 @@
       width: size(normal);
     }
 
+    @include tablet {
+      padding: 12px 30px 0px 30px;
+    }
+  
     @include ipad {
-      padding-top: 4px;
+      padding: 6px 114px 6px 114px;
+      height: 36px;
+    }
+  
+    @include phone {
+      padding: 6px 24px;
     }
 
     .logo {
@@ -36,9 +32,11 @@
   
       .logoImage {
         float: left;
+        img {
+          width: 42px;
+          height: 42px;
 
-        @include ipad {
-          img {
+          @include ipad {
             width: 24px;
             height: 24px;
           }
