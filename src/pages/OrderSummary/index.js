@@ -29,15 +29,11 @@ class OrderSummary extends Component {
               <div className={style.packBody}>
                 <div className={style.list}>
                   <span></span>
-                  <label>3 IELTS sessions</label>
+                  <label>bullet point1</label>
                 </div>
                 <div className={style.list}>
                   <span></span>
-                  <label>5 x AA</label>
-                </div>
-                <div className={style.list}>
-                  <span></span>
-                  <label>Bonus ebook</label>
+                  <label>bullet point2</label>
                 </div>
                 <div className={style.date}>
                   First session: <span>IELTS</span>, on <span>Tuesday 5:30 pm</span>

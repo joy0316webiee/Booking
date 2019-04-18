@@ -221,6 +221,8 @@
         }
 
         .list {
+          display: flex;
+          align-items: center;
           padding: 6px 20px;
 
           @include phone {
