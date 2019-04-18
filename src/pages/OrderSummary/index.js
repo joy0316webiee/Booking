@@ -22,6 +22,7 @@ class OrderSummary extends Component {
         <div className={style.content}>          
           <div className={style.package}>
             <div className={style.packWrapper}>
+              <h3>Order Summary</h3>
               <div className={style.packHead}>
                 Package1
               </div>
@@ -65,7 +66,7 @@ class OrderSummary extends Component {
                   <CheckBox
                     checked={true}
                   >
-                    <label>Agree to the <a href="#">Terms of Service</a></label>
+                    <label>Agree to the <a href="/">Terms of Service</a></label>
                   </CheckBox>
                 </div>
                 <div className={style.checkBox}>
@@ -93,7 +94,7 @@ class OrderSummary extends Component {
                   </div>
                 </div>
                 <div className={style.haveCoupon}>
-                  <img src={imgBookMark} />
+                  <img src={imgBookMark} alt="bookmark" />
                   <span>I have package coupon code</span>
                 </div>
                 <ButtonApply />                

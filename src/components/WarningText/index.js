@@ -11,7 +11,7 @@ class WarningText extends Component {
     return (
       <div className={style.container}>
          { this.props.children }
-         <img src={imgWarning} />
+         <img src={imgWarning} alt="warning" />
       </div>
     )
   }

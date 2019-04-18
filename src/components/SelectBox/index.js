@@ -22,7 +22,7 @@ class SelectBox extends Component {
     var options = this.props.options.map(function(item) {
       if (selectValue === item.value) {
         return (
-          <option value="selected" value={item.value} key={item.value}>
+          <option value={item.value} key={item.value}>
             {item.label} 
           </option>
         );

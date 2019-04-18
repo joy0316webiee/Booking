@@ -21,7 +21,7 @@ class Header extends Component {
         <div className={style.content}>
           <div className={style.logo}>
             <div className={style.logoImage}>
-              <img src={logoImage} />
+              <img src={logoImage} alt="logo"/>
             </div>
             <div className={style.logoLabel}>
               <span className={style.xScreen}>My Test Hero</span>

@@ -11,9 +11,7 @@
     text-align: left;
 
     @include ipad {
-      font-size: 19px;
-      position: absolute;
-      top: -285px;
+      display: none;
     }
   }
 
@@ -28,6 +26,21 @@
 
     @include ipad {
       font-size: 19px;
+    }
+  }
+
+  h3 {
+    font-family: Cabin;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 48px;
+    color: color(black-light);
+    text-align: left;
+    display: none;
+    
+    @include ipad {
+      display: inherit;
     }
   }
 
@@ -178,7 +191,7 @@
 
       @include ipad {
         padding: 0px;
-        margin-top: 48px;
+        margin-top: 20px;
       }
 
       .packHead {
@@ -202,13 +215,9 @@
       .packBody {
         text-align: left;
         box-shadow: 0px -1px 2px -1px color(grey-light);
-        
-        // background-position-y: 160px;
-        height: 180px;
 
         @include ipad {
           background-position-y: 133px;
-          height: 153px;
         }
 
         .list {

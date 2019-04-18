@@ -49,13 +49,13 @@ class PayMethod extends Component {
             name={"payType"}
             value={PAYMENT_ALIPAY}
             textLabel={"Alipay"}
-            checked={this.state.selectedOption == PAYMENT_ALIPAY}
+            checked={this.state.selectedOption === PAYMENT_ALIPAY}
             onChange={this.handleOptionChange}
           />
-          {this.state.selectedOption == PAYMENT_ALIPAY && <div className={style.alipayContent}>
+          {this.state.selectedOption === PAYMENT_ALIPAY && <div className={style.alipayContent}>
             <p>Pay easily and securely with Alipay</p>
             <div className={style.alipayFoot}>
-              <img src={imgAlipay}/>
+              <img src={imgAlipay} alt="alipay"/>
               <div className={style.payNow}>
                 <button>Pay Now</button>
               </div>
@@ -69,17 +69,17 @@ class PayMethod extends Component {
                 name={"payType"}
                 value={PAYMENT_CREDIT}
                 textLabel={"Credit Card"}
-                checked={this.state.selectedOption == PAYMENT_CREDIT}
+                checked={this.state.selectedOption === PAYMENT_CREDIT}
                 onChange={this.handleOptionChange}
               />
             </div>
             <div className={style.imgGroup}>
-              <img src={imgCard} />
-              <img src={imgVisa} />
-              <img src={imgExpress} />
+              <img src={imgCard} alt="card" />
+              <img src={imgVisa} alt="visa" />
+              <img src={imgExpress} alt="express" />
             </div>
           </div>
-          {this.state.selectedOption == PAYMENT_CREDIT && <div className={style.creditContent}>
+          {this.state.selectedOption === PAYMENT_CREDIT && <div className={style.creditContent}>
             <div className={style.creditBody}>
               <div className={style.cardNumber}>
                 <label>Card Number</label>
