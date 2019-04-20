@@ -46,20 +46,13 @@ class Payment extends Component {
                 onClick={() => this.handleOptionChange(PACKAGE_ONE)}
               >
                 <div className={style.packHeadTop}>
-                  <OptionBox
-                    name={"packageType"}
-                    value={PACKAGE_ONE}
-                    style={{
-                      marginBottom: "0px",
-                      padding: "0px 0px 0px 35px",
-                    }}
-                    styleLabel={this.state.selectedOption !== PACKAGE_ONE && {
+                  <label
+                    style={this.state.selectedOption !== PACKAGE_ONE && {
                       color: "#262626" } || {}
                     }
-                    text={"Package1"}
-                    checked={this.state.selectedOption === PACKAGE_ONE}
-                    onChange={() => {}}
-                  />
+                  >
+                    Package1
+                  </label>
                   <div
                     className={style.percentage}
                     style={this.state.selectedOption !== PACKAGE_ONE && {
@@ -97,20 +90,13 @@ class Payment extends Component {
                 onClick={() => this.handleOptionChange(PACKAGE_TWO)}
               >
                 <div className={style.packHeadTop}>
-                  <OptionBox
-                    name={"packageType"}
-                    value={PACKAGE_TWO}
-                    style={{
-                      marginBottom: "0px",
-                      padding: "0px 0px 0px 35px"
-                    }}
-                    styleLabel={this.state.selectedOption !== PACKAGE_TWO && {
+                  <label
+                    style={this.state.selectedOption !== PACKAGE_TWO && {
                       color: "#262626" } || {}
                     }
-                    text={"Package2"}
-                    checked={this.state.selectedOption === PACKAGE_TWO}
-                    onChange={() => {}}
-                  />
+                  >
+                    Package2
+                  </label>
                   <div
                     className={style.percentage}
                     style={this.state.selectedOption !== PACKAGE_TWO && {
@@ -148,21 +134,14 @@ class Payment extends Component {
                 onClick={() => this.handleOptionChange(ONE_SESSION)}
               >
                 <div className={style.packHeadTop}>
-                  <OptionBox
-                    name={"packageType"}
-                    value={ONE_SESSION}
-                    style={{
-                      marginBottom: "0px",
-                      padding: "0px 0px 0px 35px"
-                    }}
-                    styleLabel={this.state.selectedOption !== ONE_SESSION && {
+                  <label
+                    style={this.state.selectedOption !== ONE_SESSION && {
                       color: "#262626" } || {}
                     }
-                    text={"One Session"}
-                    checked={this.state.selectedOption === ONE_SESSION}
-                    onChange={() => {}}
-                  />
-                  <div className={style.sessionMount}>£930</div>
+                  >
+                    One Session
+                  </label>
+                  <div className={style.sessionMount}>£70</div>
                 </div>
               </div>
               <div className={style.packBody}>

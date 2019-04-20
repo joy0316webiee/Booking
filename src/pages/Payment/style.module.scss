@@ -122,7 +122,7 @@
 
             .packBody {
               padding-bottom: 20px;
-              box-shadow: 0px 2px 6px -1px #bdbdbd;
+              box-shadow: 0px 2px 6px -1px color(grey-light);
 
               @include ipad {
                 display: flex;
@@ -143,16 +143,15 @@
             }
           }
         }
-      .oneSession {
-        .packBody {
-          .list {
-            @include ipad {
-              flex-basis: 100%;
+        .oneSession {
+          .packBody {
+            .list {
+              @include ipad {
+                flex-basis: 100%;
+              }
             }
           }
         }
-      }
-
       }
       button {
         float: left;
@@ -179,14 +178,14 @@
         @include ipad {
           width: 270px;
           height: 36px;
-          background: #5FB868;
+          background: color(green-primary);
           border-radius: 100px;
           font-family: font(Cabin);
           font-style: normal;
           font-weight: bold;
           font-size: 16px;
           line-height: 20px;
-          color: #FFFFFF;
+          color: color(white);
           border-radius: 100px;
         }
       }

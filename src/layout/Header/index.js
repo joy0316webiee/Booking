@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
 
+// Components
 import SelectBox from '../../components/SelectBox'
+import CountryDropBox from '../../components/CountryDropBox'
+
+// Resources
 import logoImage from '../../resources/images/logo.png'
 
+// Styling
 import style from './style.module.scss'
-
-let langsArray = [{
-  label: 'English',
-  value: 'eng'
-}, {
-  label: 'Russian',
-  value: 'rus'
-}];
-
 
 class Header extends Component {
   render() {
@@ -29,10 +25,7 @@ class Header extends Component {
             </div>
           </div>
           <div className={style.lang}>
-            <SelectBox
-              defaultValue="eng"
-              options={langsArray}
-            />
+            <CountryDropBox/>
           </div>
         </div>
       </div>

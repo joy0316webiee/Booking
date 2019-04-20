@@ -1,0 +1,58 @@
+@import "../../constants/index.scss";
+
+@mixin dropbox-item {
+  text-align: left;
+  padding: 6.25px;
+  height: 30px;
+
+  @include ipad {
+    height: 24px;
+    padding: 5px;
+  }
+
+  img {
+    width: 26px;
+
+    @include ipad {
+      width: 21px;
+    }
+  }
+
+  @content;
+}
+
+.container {
+  position: relative;
+
+  .content {
+    left: 0px;
+    top: 0px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid color(green-primary);
+    border-radius: 2px;
+    background: color(white);
+
+    @include ipad {
+      width: 48px;
+    }
+    
+    .selected {
+      @include dropbox-item {
+        background: color(grey-lighter) url("../../resources/images/select_arrow.svg") no-repeat 90% 50%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .listItem {
+      @include dropbox-item {
+        &:hover {
+          cursor: pointer;
+          border: 1px solid color(green-primary);
+        }
+      }
+    }
+  }
+}

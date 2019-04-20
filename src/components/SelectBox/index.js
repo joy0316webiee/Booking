@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+// Style
 import style from './style.module.scss'
 
 class SelectBox extends Component {
