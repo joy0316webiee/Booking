@@ -6,8 +6,8 @@ class OptionBox extends Component {
   render() {
     return (
       <div>
-        <label className={style.container}>
-          <label className={style.textLabel}>{this.props.textLabel}</label>
+        <label className={style.container} style={this.props.style}>
+          <label className={style.textLabel} style={this.props.styleLabel}>{this.props.text}</label>
           <input
             type="radio"
             name={this.props.name}

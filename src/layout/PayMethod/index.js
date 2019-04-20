@@ -36,7 +36,7 @@ class PayMethod extends Component {
 
   handleOptionChange = (changeEvent) => {
     this.setState({
-      selectedOption: changeEvent.target.value
+      selectedOption: parseInt(changeEvent.target.value)
     });
     console.log(changeEvent.target.value);
   };
@@ -48,11 +48,13 @@ class PayMethod extends Component {
           <OptionBox
             name={"payType"}
             value={PAYMENT_ALIPAY}
-            textLabel={"Alipay"}
-            checked={this.state.selectedOption == PAYMENT_ALIPAY}
+            textLabel={{
+              text: "Alipay"
+            }}
+            checked={this.state.selectedOption === PAYMENT_ALIPAY}
             onChange={this.handleOptionChange}
           />
-          {this.state.selectedOption == PAYMENT_ALIPAY && <div className={style.alipayContent}>
+          {this.state.selectedOption === PAYMENT_ALIPAY && <div className={style.alipayContent}>
             <p>Pay easily and securely with Alipay</p>
             <div className={style.alipayFoot}>
               <img src={imgAlipay} alt="alipay"/>
@@ -68,8 +70,10 @@ class PayMethod extends Component {
               <OptionBox
                 name={"payType"}
                 value={PAYMENT_CREDIT}
-                textLabel={"Credit Card"}
-                checked={this.state.selectedOption == PAYMENT_CREDIT}
+                textLabel={{
+                  text: "Credit Card"
+                }}
+                checked={this.state.selectedOption === PAYMENT_CREDIT}
                 onChange={this.handleOptionChange}
               />
             </div>
@@ -79,7 +83,7 @@ class PayMethod extends Component {
               <img src={imgExpress} alt="express" />
             </div>
           </div>
-          {this.state.selectedOption == PAYMENT_CREDIT && <div className={style.creditContent}>
+          {this.state.selectedOption === PAYMENT_CREDIT && <div className={style.creditContent}>
             <div className={style.creditBody}>
               <div className={style.cardNumber}>
                 <label>Card Number</label>

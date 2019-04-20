@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+
+$colors: (
+  no-color: transparent, 
+  white: #ffffff,
+  black-lighter: #16141A,
+  black-light: #262626,
+  black-primary: #000000,
+  grey-light: #bdbdbd,
+  grey-primary: #665F62,
+  green-primary: #5FB868,
+  green-dark: #1A5156,
+  red-primary: #E5004B,
+);
+
+$sizes: (
+  normal: 984px,
+  desktop: 1440px,
+  tablet: 1130px,
+  ipad: 682px,
+  phone: 580px,
+  minimum: 320px,
+);
+
+$fonts: (
+  Cabin: ('Cabin', sans-serif),
+  Raleway: ('Raleway', sans-serif)
+);

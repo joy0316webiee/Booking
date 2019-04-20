@@ -1,0 +1,195 @@
+@import "../../constants/index.scss";
+
+@include container {
+
+  .content {
+    @include content {   
+      .title {
+        h1 {
+          @include ipad {
+            display: none;
+          }
+        }
+        h2 {
+          span {
+            color: color(green-primary);
+          }
+        }
+      }
+      .desc {
+        text-align: left;
+
+        p {
+          font-family: font(Raleway);
+          font-style: italic;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: normal;
+          color: color(black-light);
+
+          @include ipad {
+            font-size: 13px;
+            padding-right: 42px;
+          }
+
+          @include phone {
+            padding-right: 32px;
+          }
+        }
+        span {
+          font-family: font(Cabin);
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          color: color(green-primary);
+
+          @include ipad {
+            font-size: 13px;
+          }
+        }
+      }
+
+      .packageWrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 60px 0px 70px 0px;
+
+        @include ipad {
+          display: inherit;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+
+        >div {
+          @include package {
+            flex-basis: 32%;
+
+            @include ipad {
+              margin-bottom: 25px;
+            }
+           
+            .packHead {
+              padding: 9px 13px;
+              display: flex;
+              align-items: center;
+
+              @include tablet {
+                display: inherit;
+                text-align: right;
+              }
+
+              @include ipad {
+                display: flex;
+              }
+
+              .packHeadTop {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                @include tablet {
+                  width: 100%;
+                }
+                
+                label {
+                  font-size: 20px;
+
+                  @include ipad {
+                    font-size: 16px;
+                    padding: 0px !important;
+                  }
+                }
+
+                span {
+                  top: 3px;
+
+                  @include ipad {
+                    display: none;
+                  }
+                }
+
+                .sessionMount {
+                  color: color(black-light);
+                }
+              }
+              .packHeadBottom {
+                padding-left: 31px;
+                color: color(black-light);
+              }
+            }
+
+            .packBody {
+              padding-bottom: 20px;
+              box-shadow: 0px 2px 6px -1px #bdbdbd;
+
+              @include ipad {
+                display: flex;
+                flex-wrap: wrap;
+              }
+              
+              .list {
+                align-items: inherit;
+                
+                @include ipad {
+                  flex-basis: 50%;
+                }
+
+                span {
+                  margin-top: 7px;
+                }
+              }
+            }
+          }
+        }
+      .oneSession {
+        .packBody {
+          .list {
+            @include ipad {
+              flex-basis: 100%;
+            }
+          }
+        }
+      }
+
+      }
+      button {
+        float: left;
+        width: 289px;
+        height: 42px;
+        font-family: font(Cabin);
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: color(white);
+        background: color(green-primary);
+        border-radius: 100px;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid color(green-primary);
+          color: color(green-primary);
+          background: color(white);
+        }
+
+        @include ipad {
+          width: 270px;
+          height: 36px;
+          background: #5FB868;
+          border-radius: 100px;
+          font-family: font(Cabin);
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 20px;
+          color: #FFFFFF;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}

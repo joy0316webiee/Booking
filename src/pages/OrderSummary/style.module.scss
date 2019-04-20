@@ -1,72 +1,12 @@
 @import "../../constants/index.scss";
 
-.container {
-  h1 {
-    font-family: Cabin;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 48px;
-    color: color(black-light);
-    text-align: left;
-
-    @include ipad {
-      display: none;
-    }
-  }
-
-  h2 {
-    font-family: Cabin;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 36px;
-    color: color(black-light);
-    text-align: left;
-
-    @include ipad {
-      font-size: 19px;
-    }
-  }
-
-  h3 {
-    font-family: Cabin;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 48px;
-    color: color(black-light);
-    text-align: left;
-    display: none;
-    
-    @include ipad {
-      display: inherit;
-    }
-  }
+@include container {
 
   .content {
-    margin: 0 auto;
-    padding-top: 12px;
-    padding-bottom: 120px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    @include large {
-      width: size(normal);
-    }
-
-    @include tablet {
-      padding: 0px 30px 100px 30px;
-    }
-
-    @include ipad {
-      display: inherit;
-      padding: 0px 114px 100px 114px;
-    }
-
-    @include phone {
-      padding: 0px 24px 100px 24px;
+    @include content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
@@ -183,106 +123,24 @@
     order: 2;
 
     .packWrapper {
-      padding: 30px 0px 20px 151px;
+      padding: 0px 0px 20px 151px;
 
       @include tablet {
-        padding: 30px 0px 20px 66px;
+        padding: 0px 0px 20px 66px;
       }
 
       @include ipad {
         padding: 0px;
         margin-top: 20px;
       }
-
-      .packHead {
-        background: color(green-primary);
-        border-radius: 2px;
-        font-family: Cabin;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 24px;
-        color: color(white);
-        text-align: left;
-        padding: 8px 18px;
-
-        @include ipad {
-          padding: 3px 20px;
-          font-size: 16px;
+      
+      @include package {
+        .jagged {
+          background: url('../../resources/images/jagged.png') repeat-x;
+          height: 30px;
+          background-size: 15px;
+          background-position-y: 0px;
         }
-      }
-
-      .packBody {
-        text-align: left;
-        box-shadow: 0px -1px 2px -1px color(grey-light);
-
-        @include ipad {
-          background-position-y: 133px;
-        }
-
-        .list {
-          display: flex;
-          align-items: center;
-          padding: 6px 20px;
-
-          @include phone {
-            padding: 6px 10px;
-          }
-
-          span {
-            width: 8px;
-            height: 8px;
-            display: inline-block;
-            background-color: color(red-primary);
-            border-radius: 50%;
-
-            @include ipad {
-              width: 6px;
-              height: 6px;
-            }
-          }
-
-          label {
-            margin-left: 15px;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 21px;
-            color: color(black-light);
-
-            @include ipad {
-              font-size: 13px;
-              margin-left: 5px;
-            }
-          }
-        }
-
-        .date {
-          text-align: left;
-          padding: 10px 20px;
-          font-weight: bold;
-          font-size: 16px;
-          line-height: 21px;
-          color: color(black-light);
-  
-          span {
-            color: color(green-primary);
-          }
-
-          @include ipad {
-            font-size: 13px;
-          }
-
-          @include phone {
-            padding: 10px 10px;
-          }
-        }
-      }
-      .jagged {
-        background: url('../../resources/images/jagged.png') repeat-x;
-        height: 30px;
-        background-size: 15px;
-        background-position-y: 0px;
       }
     }
   }

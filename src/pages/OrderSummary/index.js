@@ -22,7 +22,7 @@ class OrderSummary extends Component {
         <div className={style.content}>          
           <div className={style.package}>
             <div className={style.packWrapper}>
-              <h3>Order Summary</h3>
+              <h2>Your Order</h2>
               <div className={style.packHead}>
                 Package1
               </div>
@@ -44,7 +44,6 @@ class OrderSummary extends Component {
           </div>
           <div className={style.forms}>
             <div className={style.formwrapper}>
-              <h1>Order Summary</h1>
               <div className={style.details}>
                 <h2>Your Details</h2>
                 <LabeledInputBox
